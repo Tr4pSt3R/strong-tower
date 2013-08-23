@@ -1,0 +1,14 @@
+<div class="">
+	<h1 class="headmaster">Prayer Tower</h1>
+</div>
+<div class="tagline">
+	Learn and Share how to Pray, Meditate and Intercede
+</div>
+
+
+<h2><%= link_to "Add a Prayer", new_prayer_path  %></h2> </br >
+
+<h2>Recently added...</h2>
+<% @prayers.each do |p| %>
+	<%= link_to p.title, prayer_path(p) %></br >
+<% end %>

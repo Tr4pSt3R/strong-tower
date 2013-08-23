@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @prayer.title.html_safe %>
+</p>
+
+<p>
+  <b>Content</b><br />
+  <%= @prayer.content.html_safe %>
+</p>
+
+<p>
+  <b>Credit to:</b>
+  <%= @prayer.credit_to.html_safe %>
+</p>
+
+<p>
+  <b>Remarks</b><br />
+  <%= @prayer.remarks.html_safe %>
+</p>
+
+
+<%= link_to 'Edit', edit_prayer_path(@prayer) %> |
+<%= link_to 'Back', prayers_path %> | 
+<%= link_to 'Home', root_path %>
