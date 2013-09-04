@@ -2,12 +2,34 @@ body {
   background-color: #fff;
   color: #333;
   font-family: Donegal One, verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 26px;
 }
-.h1 {
-  font-family: "Donegal One", serif;
+.h1, h2, h3, h4, h5, h6{
+  font-family: inherit;
+  font-size: inherit;
 }
+
+h1 {
+  font-size: 4em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1em;
+}
+
 .banner {
   /*display: block;*/
   margin-top: 0px;
@@ -23,14 +45,14 @@ body {
 }
 
 .tagline {
-  background-color: #7bf555;
+  /*background-color: #7bf555;*/
   margin-top: 0px;
 }
 
 p, ol, ul, td {
-  font-family: Donegal One, verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 pre {

@@ -2,17 +2,38 @@
 <html>
 	<head>
 	  <title>PrayerTower</title>
-	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= stylesheet_link_tag    "application", 		:media => "all" %>
+	  <%= stylesheet_link_tag 	 "bootstrap.min.css", 	:media => "screen" %>
 	  <%= javascript_include_tag "application" %>
+	  <%= javascript_include_tag "bootstrap.min.js" %>
 	  <%= csrf_meta_tags %>
+
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <!--Bootstrap -->
-	  <link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="screen">
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	</head>
 
 	<body>
-		<script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
-		<script type="text/javascript" src="bootstrap.min.js"></script>
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="headmaster">Prayer Tower</h1>
+				<p>Learn and Share how to Pray, Meditate and Intercede</p>
+				
+				<button type="button" class="btn btn-default btn-lg">
+		  			<span class="glyphicon glyphicon-home"></span> 
+		  			<%= link_to "", root_url %>
+				</button>
+
+				<button class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+					<%= link_to "", new_prayer_path  %>
+				</button>
+
+				<button class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>Share
+				</button>
+			</div>
+		</div>
 		<%= yield %>
 	</body>
 </html>
