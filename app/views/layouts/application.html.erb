@@ -14,26 +14,35 @@
 	</head>
 
 	<body>
-		<div class="jumbotron">
-			<div class="container">
-				<h1 class="headmaster">Prayer Tower</h1>
-				<p>Learn and Share how to Pray, Meditate and Intercede</p>
-				
-				<button type="button" class="btn btn-default btn-lg">
-		  			<span class="glyphicon glyphicon-home"></span> 
-		  			<%= link_to "", root_url %>
-				</button>
+		<div class="container">
+			<div class="jumbotron">
+				<div class="container">
+					<h1 class="headmaster">Prayer Tower</h1>
+					<p>Learn and Share how to Pray, Meditate and Intercede</p></br >
+					<p>
+						<%= link_to "Home", root_url %>
+						|
+						<%= link_to "Add New Prayer", new_prayer_path %>
+					</p>
+					
+					<!-- <span class="glyphicon glyphicon-search">Search</span>
 
-				<button class="btn btn-default btn-lg">
-					<span class="glyphicon glyphicon-plus"></span>
-					<%= link_to "", new_prayer_path  %>
-				</button>
+					<button type="button" class="btn btn-default btn-lg">
+			  			<span class="glyphicon glyphicon-refresh"></span> 
+			  			<%= link_to "", root_url %>
+					</button>
 
-				<button class="btn btn-default btn-lg">
-					<span class="glyphicon glyphicon-plus"></span>Share
-				</button>
+					<button class="btn btn-default btn-lg">
+						<span class="glyphicon glyphicon-plus"></span>
+						<%= link_to "", new_prayer_path  %>
+					</button>
+
+					<button class="btn btn-default btn-lg">
+						<span class="glyphicon glyphicon-plus"></span>Share
+					</button> -->
+				</div>
 			</div>
+			<%= yield %>
 		</div>
-		<%= yield %>
 	</body>
 </html>

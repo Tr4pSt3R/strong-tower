@@ -1,26 +1,39 @@
 <p id="notice"><%= notice %></p>
+<span class="glyphicon glyphicon-refresh">Search</span>
+<div class="row">
+	<div class="col-md-8">
+		.col-md-8
+		<p>
+		  <b>Title:</b>
+		  <%= @prayer.title.html_safe %>
+		</p>
 
-<p>
-  <b>Title:</b>
-  <%= @prayer.title.html_safe %>
-</p>
+		<p>
+		  <b>Content</b><br />
+		  <%= @prayer.content.html_safe %>
+		</p>
 
-<p>
-  <b>Content</b><br />
-  <%= @prayer.content.html_safe %>
-</p>
+		<p>
+		  <b>Credit to:</b>
+		  <%= @prayer.credit_to.html_safe %>
+		</p>
 
-<p>
-  <b>Credit to:</b>
-  <%= @prayer.credit_to.html_safe %>
-</p>
+		<p>
+		  <b>Remarks</b><br />
+		  <%= @prayer.remarks.html_safe %>
+		</p>
+	</div>
+	<div class="col-md-4">
+		.col-md-4
+		<h2>Recently added...</h2>
+		<% @prayers.each do |p| %>
+			<%= link_to p.title, prayer_path(p) %></br >
+		<% end %>
+	</div>
+</div>
 
-<p>
-  <b>Remarks</b><br />
-  <%= @prayer.remarks.html_safe %>
-</p>
-
-
-<%= link_to 'Edit', edit_prayer_path(@prayer) %> |
-<%= link_to 'Back', prayers_path %> | 
-<%= link_to 'Home', root_path %>
+<div class="row">
+	<%= link_to 'Edit', edit_prayer_path(@prayer) %> |
+	<%= link_to 'Back', prayers_path %> | 
+	<%= link_to 'Home', root_path %>
+</div>

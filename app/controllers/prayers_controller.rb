@@ -13,6 +13,7 @@ class PrayersController < ApplicationController
   # GET /prayers/1
   # GET /prayers/1.json
   def show
+    @prayers = Prayer.all
     @prayer = Prayer.find(params[:id])
 
     respond_to do |format|
